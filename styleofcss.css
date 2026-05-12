@@ -1,0 +1,26 @@
+/* external css */
+body{
+     background-image:url(https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/ef/43/ae/ef43ae90-5fb5-bc37-f2ab-de644418b5f0/AppIcon_SilverOak-0-0-1x_U007emarketing-0-0-0-6-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x630wa.png);
+     background-size: cover;
+}
+.ABC{ 
+    background-color: lightblue;
+    text-align: center;
+    font-size: 50px;
+    color:darkblue;
+    letter-spacing:3px;
+    word-spacing:3px;
+   text-transform:uppercase;
+}
+#SOU{
+    background-color: lightsteelblue; 
+    font-size: 30px;
+    color:darkblue;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+}
+div h1{
+    font-family:serif;
+    text-decoration:wavy underline;
+}
