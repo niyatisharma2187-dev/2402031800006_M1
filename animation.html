@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY3</title>
+    <link rel="stylesheet" href="DAY3.css">
+</head>
+<body>
+    <h1>silver oak university</h1>
+    <h2>department of computer engineering</h2>
+
+  
+<section>
+  <div class="left">1</div>
+  <div class="left">2</div>
+  <div class="right">3</div>
+<p>
+    SILVER OAK UNIVERSITY IS A PRIVATE UNIVERSITY IN THE STATE OF AHMEDABAD, GUJARAT, INDIA. 
+</p>
+</section>
+</body>
+</html>
+
+css
+<style>
+section{
+    width:250px;
+    padding :40px;
+    background:linear-gradient(135deg,blue,darkred);
+    color:white;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0,1);
+    cursor:pointer;
+     box-shadow: 0 10px 10px black;
+
+    animation: float 5s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+section:hover {
+    transform: scale(1.1) ;
+   
+    animation-play-state:running;
+}
+@keyframes float {
+    0% {
+        /* Initial position */
+        transform: translateY(0px) rotateX(0deg);
+    }
+    50% {
+        /* Move up 20px and tilt slightly */
+        transform: translateY(-20px) rotateX(10deg);
+    }
+    100% {
+        /* Return to start */
+        transform: translateY(0px) rotateX(0deg);
+    }
+}
+</style>
