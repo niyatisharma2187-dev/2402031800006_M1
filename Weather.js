@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+
     <script>
         var temp = prompt("Enter the temperature in celsius");
         if (temp > 30) {
@@ -21,5 +14,3 @@
             document.write("OMG! It is so cold outside");
         }
     </script>
-</body>
-</html>
