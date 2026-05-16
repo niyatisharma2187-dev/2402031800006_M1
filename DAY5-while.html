@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1> Looping Statement</h1>
+    <script>
+        var a=1;
+        document.write("<h2>While loop</h2>")
+        document.write("<h3>Print numbers from 1 to 10</h3>")
+        while(a<11){
+            document.write("<br> value of a is "+ a);
+            a++;
+        }
+
+
+        var b=2;
+        document.write("<h3> Print even numbers between 1 and 10</h3>")
+        while(b<11){
+           document.write("<br> "+ b);
+           b=b+2;
+        }
+        
+
+        let num1 = 5;
+        let i = 1;
+        document.write("<h3>Multiplication Table</h3>");
+        while (i <= 10) {
+            document.write(num1 + " x " + i + " = " + (num1 * i) + "<br>");
+            i++;
+        }
+
+
+        let n1 = 10;
+        let sum = 0;
+        let j = 1;
+        while (j <= n1) {
+            sum += j;
+            j++;
+        }
+        document.write("<h3>Sum of first 10  Natural Numbers</h3>");
+        document.write("Sum = " + sum);
+
+
+        let n2 = 5;
+        let factorial = 1;
+        let k = 1;
+        while (k <= n2) {
+            factorial *= k
+            k++;
+        }
+        document.write("<h3>Factorial of 5 </h3>");
+        document.write("Factorial = " + factorial);
+
+        
+        let num2 = 12345;
+        let reverse = 0;
+        while (num2 > 0) {
+            let digit = num2 % 10;
+            reverse = reverse * 10 + digit;
+            num2 = Math.floor(num2 / 10);
+        }
+        document.write("<h3>Reverse Number of 12345 </h3>");
+        document.write("Reversed Number = " + reverse)
+
+
+        let num4 = 987654;
+        let count = 0;
+        while (num4 > 0) {
+            count++;
+            num4 = Math.floor(num4 / 10);
+        }
+        document.write("<h3>Count Digits</h3>");
+        document.write("Number of Digits in 987654 is <br> ");
+        document.write(count);
+
+
+let num5 = 583927;
+let largest = 0;
+while (num5 > 0) {
+    let digit = num5 % 10;
+    if (digit > largest) {
+        largest = digit;
+    }
+    num5 = Math.floor(num5 / 10);
+}
+document.write("<h3>Find largest digit in a number </h3>");
+document.write("Largest Digit in 583927 is = " + largest);
+
+
+let terms = 10;
+let ab = 0, bc = 1;
+let ca;
+let t = 1;
+document.write("<h3>Generate Fibonacci series till 10 terms</h3>");
+while (t <= terms) {
+    document.write(ab + "<br>");
+    ca = ab + bc;
+    ab = bc;
+    bc = ca;
+    t++;
+}
+
+
+
+let num3 = 121;
+let original = num3;
+let rev = 0;
+while (num3 > 0) {
+    let digit = num3 % 10;
+    rev = rev * 10 + digit;
+    num3 = Math.floor(num3 / 10);
+}
+document.write("<h3>Palindrome Check</h3>");
+document.write("<h4>Check 121 is palindrome or not </h4>");
+
+if (original === rev) {
+    document.write("Palindrome Number");
+} else {
+    document.write("Not a Palindrome Number");
+}
+
+    </script>
+</body>
+</html>
