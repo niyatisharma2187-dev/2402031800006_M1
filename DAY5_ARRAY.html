@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+//Array
+var Car = new Array(3);
+Car[0] = "Ford";
+Car[1] = "Toyota";
+Car[2] = "Honda";
+var Car2 = new Array("Ford", "Toyota", "Honda");
+var Car3 = ["odi", "innova", "vagon"];
+document.write(Car2 + "<br>"); // output : Ford,Toyota,Honda
+Car2.push("Yamaha");
+document.write(Car2 + "<br>"); // output : Ford,Toyota,Honda,Yamaha
+Car2.pop();
+document.write(Car2 + "<br>"); // output : Ford,Toyota,Honda
+var data = Car2.concat(Car3);
+document.write(data + "<br>"); // output : Ford,Toyota,Honda,odi,innova,vagon
+
+//confirm box
+var a = confirm("Are you sure??");
+if(a==true) {
+alert("Record Deleted");
+}
+else {
+alert("Record Not Deleted");
+}
+
+//Functions (Return Values)
+function foo (p1)
+{
+if (typeof(p1) == "number")
+return document.write("<br> 0");// Return a number
+else
+if (typeof(p1) == "string")
+return document.write(" <br> zero"); // Return a string
+// If no value being explicitly returned "undefined" is returned.
+}
+foo(1);// returns 0
+foo("abc");// returns "zero"
+foo(5);// returns undefined
+
+</script>
+</body>
+</html>
+
+
+
+
