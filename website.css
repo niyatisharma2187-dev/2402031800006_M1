@@ -1,0 +1,181 @@
+/* Custom CSS Variables for easy theme changing */
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --text-dark: #1f2937;
+    --text-light: #f3f4f6;
+    --bg-light: #ffffff;
+    --bg-gray: #f9fafb;
+    --border-color: #e5e7eb;
+}
+
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Mobile First Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--bg-light);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: none; /* Hidden by default on mobile */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: var(--bg-light);
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.nav-links.active {
+    display: flex; /* Displayed when JavaScript toggles the 'active' class */
+}
+
+.nav-links li {
+    list-style: none;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--bg-gray);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Hamburger Icon styling */
+.hamburger {
+    display: block;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+/* Core Layout & Typography */
+main {
+    margin-top: 70px; /* Offset for fixed header */
+}
+
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#about, #contact {
+    background-color: var(--bg-gray);
+}
+
+h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--text-dark); }
+h2 { font-size: 2rem; margin-bottom: 2rem; color: var(--primary-color); }
+p { margin-bottom: 2rem; font-size: 1.1rem; color: #4b5563; }
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover { background-color: var(--primary-hover); }
+
+/* Mobile Grids (Stacked) */
+.skills-grid, .project-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill, .project-card {
+    background: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.project-card h3 { margin-bottom: 1rem; }
+.project-card p { margin-bottom: 0; font-size: 1rem; }
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--text-dark);
+    color: var(--text-light);
+}
+
+/* -------------------------------------- */
+/* Desktop Media Query (Width > 768px)    */
+/* -------------------------------------- */
+@media (min-width: 768px) {
+    /* Switch to Horizontal Nav */
+    .hamburger { display: none; }
+    
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        box-shadow: none;
+        gap: 2rem;
+    }
+    
+    .nav-links li { padding: 0; border: none; }
+    
+    h1 { font-size: 3.5rem; }
+    
+    /* Expand Grids */
+    .skills-grid { grid-template-columns: repeat(3, 1fr); }
+    .project-grid { grid-template-columns: repeat(3, 1fr); }
+}
