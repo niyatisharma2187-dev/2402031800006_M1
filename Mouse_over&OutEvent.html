@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <img src="https://www.shutterstock.com/image-photo/light-bulb-turned-off-over-600w-320485652.jpg" height="180px" alt="" id="bulb"> 
+</body>
+
+<script>
+    var a = document.getElementById("bulb");
+a.addEventListener("mouseover",()=>{
+    a.src= "https://m.media-amazon.com/images/I/71zK+2otJ0L._AC_SL1500_.jpg";
+});
+
+a.addEventListener("mouseout",()=>{
+    a.src= "https://www.shutterstock.com/image-photo/light-bulb-turned-off-over-600w-320485652.jpg";
+});
+</script>
+</html>
