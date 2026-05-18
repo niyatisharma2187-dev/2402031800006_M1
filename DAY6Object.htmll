@@ -1,0 +1,34 @@
+
+<!-- Creating objects using new Object() -->
+ <script> 
+var person = new Object();
+
+// Assign fields to object "person"
+
+person.firstName = "Niyati";
+
+person.lastName = "sharma";
+
+// Assign a method to object "person"
+ 
+person.sayHi = ()=>{
+
+alert("Welcome " + person.firstName + " " + person.lastName)
+
+}
+
+person.sayHi(); // Call the method in "person"
+
+</script>
+
+<!-- Creating objects using Literal Notation -->
+
+<script>
+var person = {firstName: "Niyati", lastName: "sharma",
+sayHi : function()
+{
+alert("Hi! " + person.firstName + " " + person.lastName);
+}
+}
+person.sayHi(); // Call the method in "person"
+</script>
