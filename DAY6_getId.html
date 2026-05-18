@@ -1,0 +1,45 @@
+
+<!-- get element by id -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="myText">
+    <button onclick="func()">submit text</button>
+    <script>
+        function func(){
+            var txt = document.getElementById("myText");
+            alert(txt.value);
+        }
+    </script>
+</body>
+</html>
+<br>
+<br><br><br><br><br>
+<hr>
+
+<!-- getelementbyName-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="myText">
+    <button onclick="Myfunction()">submit text</button>
+    <script>
+        function Myfunction(){
+             a= document.getElementsByName("myText")[0];
+            alert(a.value);
+        }
+    </script>
+</body>
+</html>
+
+
