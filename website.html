@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"
+          href="website.css">
+    <title>Instagram Clone</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="#">
+                      <img src="#" alt="img1" height="30px">
+                    </a>
+                </div>
+                <div class="searchbar">
+                    <input type="text"placeholder="Search">
+                    <img src="#"height="18"alt="img2">
+                </div>
+                <div class="nav-links">
+                    <ul class="nav-group">
+                        <li class="nav-item">
+                            <a href="#">
+                                <i class="fas fa-home"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="">
+                                <i class="fab fa-facebook-messenger"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="">
+                                <i class="far fa-compass"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="">
+                                <i class="far fa-heart"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="action">
+                                <div class="profile" 
+                                     onclick="menuToggle()">
+                                    <img src="#"alt="user Avatar">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+              </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="col-9">
+                <div class="statuses">
+                    <div class="status">
+                        <div class="image">
+                            <img src="#"alt="img3">
+                        </div>
+                    </div>
+                    <div class="status">
+                        <div class="image">
+                            <img src="#"alt="img4">
+                        </div>
+                    </div>
+                    <div class="status">
+                        <div class="image">
+                            <img src="#" alt="img5">
+                        </div>
+                    </div>
+                    <div class="status">
+                        <div class="image">
+                            <img src="#" 
+                                 alt="img6">
+                        </div>
+                    </div>
+                    <div class="status">
+                        <div class="image">
+                            <img src="#" 
+                                 alt="img7">
+                        </div>
+                    </div>
+                    <div class="status">
+                        <div class="image">
+                            <img src="#" 
+                                 alt="img8">
+                        </div>
+                    </div>
+                </div>
+              
+              <!-- Code for viewing the Post -->
+                <div class="card">
+                    <div class="top">
+                        <div class="userDetails">
+                            <div class="profilepic">
+                                <div class="profile_img">
+                                    <div class="image">
+                                        <img src="#" 
+                                             alt="img8">
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Ayush Agarwal
+                                  <br>
+                                  <span>Mumbai, India</span>
+                          </h3>
+                        </div>
+                        <div>
+                            <span class="dot">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="imgBx">
+                        <img src="#"
+                            alt="post-1" class="cover">
+                    </div>
+                    <div class="bottom">
+                        <div class="actionBtns">
+                            <div class="left">
+                                <span class="heart" 
+                                      onclick="addlike()">
+                                    <span>
+                                        <svg aria-label="Like" 
+                                             color="#262626" 
+                                             fill="#262626" 
+                                             height="24" 
+                                             role="img"
+                                             viewBox="0 0 48 48" 
+                                             width="24">
+                                        </svg>
+                                    </span>
+                                </span>
+                                <svg aria-label="Comment" 
+                                     class="_8-yf5 " 
+                                     color="#262626" 
+                                     fill="#262626" 
+                                     height="24"
+                                     role="img" 
+                                     viewBox="0 0 48 48" 
+                                     width="24">
+                                </svg>
+                                <svg aria-label="Share Post" 
+                                     class="_8-yf5 " 
+                                     color="#262626" 
+                                     fill="#262626" 
+                                     height="24"
+                                     role="img"
+                                     viewBox="0 0 48 48" 
+                                     width="24">
+                                </svg>
+                            </div>
+                            <div class="right">
+                                <svg aria-label="Save" 
+                                     class="_8-yf5 " 
+                                     color="#262626" 
+                                     fill="#262626" 
+                                     height="24"
+                                     role="img" 
+                                     viewBox="0 0 48 48" 
+                                     width="24">
+                                </svg>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <p class="likes">203 likes</p>
+
+                        </a>
+                        <a href="#">
+                            <p class="message">
+                              <b>Raju Modi</b>
+                            </p></a>
+                        <a href="#">
+                            <h4 class="comments">View all 32 comments</h4>
+                        </a>
+                        <a href="#">
+                            <h5 class="postTime">2 hours ago</h5>
+                        </a>
+                        <div class="addComments">
+                            <div class="reaction">
+                                <h3>
+                                  <i class="far fa-smile"></i>
+                                </h3>
+                            </div>
+                            <input type="text"
+                                   class="text"
+                                   placeholder="Add a comment...">
+                            <a href="#">Post</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="top">
+                        <div class="userDetails">
+                            <div class="profilepic">
+                                <div class="profile_img">
+                                    <div class="image">
+                                        <img src="#" alt="img9">
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Piyush Agarwal<br>
+                              <span>Delhi, India</span>
+                             </h3>
+                        </div>
+                        <div>
+                            <span class="dot">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="imgBx">
+                        <img src="#" 
+                            alt="post-1" class="cover">
+                    </div>
+                    <div class="bottom">
+                        <div class="actionBtns">
+                            <div class="left">
+                                <span class="heart" 
+                                      onclick="addlike()">
+                                
+                                </span>
+                                
+                            </div>
+                            <div class="right">
+                        
+                                </svg>
+                            </div>
+                        </div>
+                     
+                        <a href="#">
+                            <p class="likes">119 likes</p>
+                        </a>
+                        <a href="#">
+                            <p class="message">
+                              <b>Piyush Agarwal</b>
+                            </p>
+                        </a>
+                        <a href="#">
+                            <h4 class="comments">View all 20 comments</h4>
+                        </a>
+                        <a href="#">
+                            <h5 class="postTime">4 hours ago</h5>
+                        </a>
+                        <div class="addComments">
+                            <div class="reaction">
+                                <h3><i class="far fa-smile"></i></h3>
+                            </div>
+                            <input type="text" 
+                                   class="text" 
+                                   placeholder="Add a comment...">
+                            <a href="#">Post</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="top">
+                        <div class="userDetails">
+                            <div class="profilepic">
+                                <div class="profile_img">
+                                    <div class="image">
+                                        <img src="./assets/images/user-3.jpeg" 
+                                            alt="img10">
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Keshav Agarwal<br>
+                              <span>Kolkata, India</span>
+                            </h3>
+                        </div>
+                        <div>
+                            <span class="dot">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="imgBx">
+                        <img src=
+"#" 
+                            alt="post-1" 
+                            class="cover">
+                    </div>
+                    <div class="bottom">
+                        <div class="actionBtns">
+                            <div class="left">
+                                <span class="heart" 
+                                      onclick="addlike()">
+                                    <span>
+                                        <svg aria-label="Like" 
+                                             color="#262626" 
+                                             fill="#262626" 
+                                             height="24" 
+                                             role="img"
+                                             viewBox="0 0 48 48"
+                                             width="24">
+                                            
+                                        </svg>
+                                    </span>
+                                </span>
+                                <svg aria-label="Comment" 
+                                     class="_8-yf5 " 
+                                     color="#262626" 
+                                     fill="#262626" 
+                                     height="24"
+                                     role="img" 
+                                     viewBox="0 0 48 48" 
+                                     width="24">
+                                   
+                                </svg>
+                                <svg aria-label="Share Post"
+                                     class="_8-yf5 " 
+                                     color="#262626" 
+                                     fill="#262626" 
+                                     height="24"
+                                     role="img" 
+                                     viewBox="0 0 48 48" 
+                                     width="24">
+                                    
+                                </svg>
+                            </div>
+                            <div class="right">
+                                <svg aria-label="Save" 
+                                     class="_8-yf5 " 
+                                     color="#262626" 
+                                     fill="#262626" 
+                                     height="24"
+                                     role="img" 
+                                     viewBox="0 0 48 48" 
+                                     width="24">
+                                   
+                                </svg>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <p class="likes">184 likes</p>
+                        </a>
+                        <a href="#">
+                            <p class="message">
+                              <b>Mayank</b> Nature 
+                                <span>#love</span>
+                                <span>#2021</span>
+                            </p>
+                        </a>
+                        <a href="#">
+                            <h4 class="comments">View all 25 comments</h4>
+                        </a>
+                        <a href="#">
+                            <h5 class="postTime">9 hours ago</h5>
+                        </a>
+                        <div class="addComments">
+                            <div class="reaction">
+                                <h3>
+                                  <i class="far fa-smile"></i>
+                               </h3>
+                            </div>
+                            <input type="text"
+                                   class="text" 
+                                   placeholder="Add a comment...">
+                            <a href="#">Post</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+                                    
+                <div class="footer">
+                    <a class="footer-section" href="#">About</a>
+                    <a class="footer-section" href="#">Help</a>
+                    <a class="footer-section" href="#">API</a>
+                    <a class="footer-section" href="#">Jobs</a>
+                    <a class="footer-section" href="#">Privacy</a>
+                    <a class="footer-section" href="#">Terms</a>
+                    <a class="footer-section" href="#">Locations</a>
+                    <br>
+                    <a class="footer-section" href="#">Top Accounts</a>
+                    <a class="footer-section" href="#">Hashtag</a>
+                    <a class="footer-section" href="#">Language</a>
+                    <br><br>
+                    <span class="footer-section">
+                        &copy; 2023 INSTAGRAM FROM FACEBOOK
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

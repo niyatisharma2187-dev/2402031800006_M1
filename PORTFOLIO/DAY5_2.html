@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Looping Statement: “for”,“do … while” and “for/in”</h2>
+    <script>
+        let i;
+
+        //Printing numbers 
+        document.write("<h3>Print numbers from 1 to 10 using for loop</h3>")
+        for(i=1;i<=10;i++){ document.write(i+"<br>"); }
+
+        //Display student names
+        document.write("<h3>Display student names in array using for loop</h3>")
+        let arr=["dhruvi","nivedi","tanvi","Shivani","khushi"];
+        for(i=0;i<5;i++){ document.write(arr[i]+"<br>"); }
+
+        //Print even numbers
+        document.write("<h3>Count even digits using for loop</h3>");
+        let n=prompt("Enter a number untill you count the even numbers : ");
+        let count=0;
+        for(i=1;i<=n;i++){
+            if(i%2==0){ count++; }
+        }
+        document.write("Even number between 1 and "+n+" is "+count+" !");
+        document.write("<br>");
+
+        //Factorial
+        document.write("<h3>find factorial of number using do..while loop</h3>");
+        let n3=prompt("Enter a number to find factorial: ");
+        i=n3;
+        let m=1;
+        do{
+           m=n3*m;
+           n3--;
+        }while(n3>0)
+        document.write("The factorial of  "+i+" is "+m+" !");
+        document.write("<br>");
+
+        //palindrome or not 
+        document.write("<h3>check palindrome or not using do..while loop</h3>");
+        let str = prompt("Enter a word to check palindrome or not:");
+        let original = str;
+        let reverse = "";
+        let j = str.length - 1;
+        do {
+            reverse += str[j];
+            j--;
+        }while (j >= 0);
+        if (original === reverse) {
+            document.write(original + " is a Palindrome");
+            } 
+        else {
+            document.write(original + " is Not a Palindrome");
+            }
+
+        
+        document.write("<h3>guess number between 1 to 10</h3>");
+        let guess;
+        const secret = 7;
+        do {
+        guess = Number(prompt("Guess the number (1-10):")); 
+        } while (guess !== secret);
+        document.write("Correct guess!");
+
+
+        //for in loop
+        document.write("<h3> for in loop ex code </h3><br>")
+        let student = {
+            name: "Rahul",
+            age: 20,
+            city: "Ahmedabad"
+        };
+        for (let key in student) {
+        document.write(key + " : " + student[key] + "<br>");
+        }
+        
+    </script>
+</body>
+</html>
+
+
+
