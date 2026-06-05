@@ -13,9 +13,10 @@ const contactSchema = mongoose.Schema({
      phone:{
         type:String
     },
-     email:{
+    address:{
         type:String
     }  
+    
 })
 
 const contact = mongoose.model("contact", contactSchema)

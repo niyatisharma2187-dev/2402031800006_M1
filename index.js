@@ -22,24 +22,37 @@ app.get('/',async(req,res) => {
 
 app.get('/show-contact/:id',async (req,res) => {
     const SingleContact = await contact.findById(req.params.id);
-    res.json(SingleContact);
-   
-    // res.render('show-contact',{contact})
+    res.render('show-contact',{contact:SingleContact})
 })
 
 
 app.get('/add-contact',(req,res) => {res.render('add-contact')})
 
 
-app.post('/add-contact',(req,res) => {})
+app.post('/add-contact',async (req,res) => {
+    const newContact = await contact.create(req.body)
+    res.redirect('/')
+})
 
 
-app.get('/update-contact/:id',(req,res) => {res.render('update-contact')})
-app.post('/update-contact/:id',(req,res) => {})
-app.get('/delete-contact/:id',(req,res) => {})
+//  CORRECTED ROUTE STRUCTURE:
+app.get('/update-contact/:id', async (req, res) => {
+    const foundContact = await contact.findById(req.params.id);
+    res.render('update-contact', { contact: foundContact })
 
+    });
 
+app.post('/update-contact/:id',async (req,res) => {
+    const {first_name, last_name, email, phone,address} = req.body
+    await contact.findByIdAndUpdate(req.params.id, req.body)
+    res.redirect("/")
+})
 
-app.listen(450, () => {
-    console.log('Server is running on port 450')
+app.get('/delete-contact/:id',async (req,res) =>  {
+    await contact.findByIdAndDelete(req.params.id)
+    res.redirect("/")
+})
+
+app.listen(45, () => {
+    console.log('Server is running on port 45')
 })
